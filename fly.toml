@@ -1,15 +1,15 @@
-app = "aiostreams-private-lpfwrw"
-primary_region = "ams"
+app = "aiostreams-private"
+primary_region = "fra"
 
 [http_service]
-  auto_start_machines = true
-  auto_stop_machines = true
+  internal_port = 3000
   force_https = true
-  internal_port = 80
-  min_machines_running = 0
+  auto_stop_machines = false
+  auto_start_machines = true
+  min_machines_running = 1
   processes = ["app"]
 
 [[vm]]
   cpu_kind = "shared"
-  cpus = 1
+  cpus = 2
   memory = "1gb"
