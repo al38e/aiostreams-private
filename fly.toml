@@ -1,4 +1,4 @@
-app = "aio-stream-app"
+app = "aiostreams-private"
 primary_region = "ams"
 
 [build]
