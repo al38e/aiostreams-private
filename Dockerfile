@@ -1,14 +1,6 @@
-FROM python:3.11-slim
+FROM ghcr.io/viren070/aiostreams:latest
 
-WORKDIR /app
+ENV PORT=3000
+ENV NODE_ENV=production
 
-ENV PYTHONDONTWRITEBYTECODE=1
-ENV PYTHONUNBUFFERED=1
-
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-
-COPY . .
-
-EXPOSE 8080
-CMD ["sh", "-c", "gunicorn -b 0.0.0.0:8080 app:app"]
+EXPOSE 3000
